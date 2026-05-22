@@ -3,6 +3,11 @@ name = "ppx-cli"
 version = "0.1.0"
 edition = "2021"
 description = "CLI utility for Perplexity AI search and deep research"
+license = "MIT"
+repository = "https://github.com/gsedometov/pplx"
+authors = ["Georgii Sedometov <gsedometov@gmail.com>"]
+keywords = ["perplexity", "search", "ai", "cli"]
+categories = ["command-line-utilities"]
 
 [[bin]]
 name = "ppx"
