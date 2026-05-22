@@ -1,4 +1,4 @@
-# pplx
+# ppx-cli
 
 CLI utility for [Perplexity AI](https://perplexity.ai) search and deep research, written in Rust.
 
@@ -7,20 +7,20 @@ Supports four modes — quick search, pro, reasoning, and deep research — with
 ## Installation
 
 ```bash
-cargo install --git https://github.com/gsedometov/pplx
+cargo install ppx-cli
 ```
 
-Requires [Rust](https://rustup.rs/) and Cargo.
+Requires [Rust](https://rustup.rs/) and Cargo. The binary is installed as `ppx`.
 
 ## Setup
 
 Set your Perplexity API key:
 
 ```bash
-pplx auth pplx-xxxxxxxxxxxx
+ppx auth pplx-xxxxxxxxxxxx
 ```
 
-Or run `pplx auth` for an interactive prompt.
+Or run `ppx auth` for an interactive prompt.
 
 The key is saved to `~/.pplx/config.toml`. You can also set the `PERPLEXITY_API_KEY` environment variable as a fallback.
 
@@ -28,31 +28,31 @@ The key is saved to `~/.pplx/config.toml`. You can also set the `PERPLEXITY_API_
 
 ```bash
 # Quick search (default)
-pplx 'What is the USD to KZT exchange rate?'
+ppx 'What is the USD to KZT exchange rate?'
 
 # Specific mode
-pplx -m pro 'query'
-pplx -m reasoning 'query'
-pplx -m deep-research 'query'
+ppx -m pro 'query'
+ppx -m reasoning 'query'
+ppx -m deep-research 'query'
 ```
 
 ### Options
 
 ```bash
 # System prompt
-pplx -s 'Be concise, bullet points only' 'benefits of Rust'
+ppx -s 'Be concise, bullet points only' 'benefits of Rust'
 
 # Recency filter: day, week, month, year
-pplx -r week 'latest AI news'
+ppx -r week 'latest AI news'
 
 # Domain filter (comma-separated)
-pplx -d 'arxiv.org,nature.com' 'quantum computing advances'
+ppx -d 'arxiv.org,nature.com' 'quantum computing advances'
 
 # JSON output
-pplx --json 'query'
+ppx --json 'query'
 
 # Custom tokens and temperature
-pplx --max-tokens 8192 -t 0.5 'detailed explanation of X'
+ppx --max-tokens 8192 -t 0.5 'detailed explanation of X'
 ```
 
 ## Modes

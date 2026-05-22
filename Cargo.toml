@@ -1,8 +1,12 @@
 [package]
-name = "pplx"
+name = "ppx-cli"
 version = "0.1.0"
 edition = "2021"
 description = "CLI utility for Perplexity AI search and deep research"
+
+[[bin]]
+name = "ppx"
+path = "src/main.rs"
 
 [dependencies]
 reqwest = { version = "0.12", features = ["json", "blocking"] }

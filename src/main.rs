@@ -58,7 +58,7 @@ fn resolve_api_key() -> Result<String, String> {
             return Ok(key);
         }
     }
-    Err("No API key found. Run `pplx auth` to set one, or set PERPLEXITY_API_KEY.".into())
+    Err("No API key found. Run `ppx auth` to set one, or set PERPLEXITY_API_KEY.".into())
 }
 
 // ── CLI ─────────────────────────────────────────────────────────────────────
@@ -83,7 +83,7 @@ impl std::fmt::Display for Mode {
 }
 
 #[derive(Parser)]
-#[command(name = "pplx")]
+#[command(name = "ppx")]
 #[command(about = "Perplexity AI search & deep research CLI")]
 #[command(version)]
 struct Cli {
@@ -225,7 +225,7 @@ fn main() {
     if cli.query.is_empty() {
         eprintln!(
             "{}",
-            "Error: provide a query. Usage: pplx \"your query here\"".red()
+            "Error: provide a query. Usage: ppx \"your query here\"".red()
         );
         std::process::exit(1);
     }
